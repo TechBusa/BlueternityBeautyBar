@@ -57,6 +57,27 @@
         .nav-link {
             @apply text-deep-charcoal hover:text-luxury-gold transition-colors duration-300 font-medium tracking-wide text-sm uppercase;
         }
+
+        /* Slideshow Animation Styles */
+        .service-image, .gallery-slide-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .service-image.active, .gallery-slide-item.active {
+            opacity: 1;
+            z-index: 10;
+        }
+        
+        .service-image.inactive, .gallery-slide-item.inactive {
+            opacity: 0;
+            z-index: 0;
+        }
     </style>
 </head>
 <body>
@@ -92,7 +113,7 @@
     <section id="home" class="hero-bg h-[70vh] md:h-[90vh] flex items-center justify-center text-center relative overflow-hidden">
         <!-- Parallax/Static Bg Image -->
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed transform scale-105"
-             style="background-image: url('hero-bg.jpg');"></div>
+             style="background-image: url('https://images.stockcake.com/public/e/e/0/ee0c66b8-2fbd-4184-93e7-38bae395dc4e_large/sunset-tulip-field-stockcake.jpg');"></div>
         
         <!-- Sophisticated Overlay: Soft warm gradient -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20"></div>
@@ -139,64 +160,103 @@
 
             <!-- Service Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="group bg-white p-10 shadow-sm hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-luxury-gold/20 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-hand-sparkles text-8xl text-luxury-gold"></i>
+                <!-- Card 1: BIAB Nails -->
+                <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                    <!-- Slideshow Container -->
+                    <div class="relative h-64 w-full overflow-hidden service-slideshow">
+                        <img src="BIAB.jpg" class="service-image active" alt="BIAB Nails" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=BIAB+1';">
+                        <img src="BIAB_2.jpg" class="service-image inactive" alt="BIAB Nails Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=BIAB+2';">
                     </div>
-                    <h3 class="text-2xl font-playfair mb-4 group-hover:text-luxury-gold transition-colors">BIAB Nails</h3>
-                    <p class="text-warm-gray font-light leading-relaxed mb-6">The gold standard for natural nail growth. Durable, protective, and flawlessly finished.</p>
-                    <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    <div class="p-8 border-t border-luxury-gold/10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-playfair group-hover:text-luxury-gold transition-colors">BIAB Nails</h3>
+                            <i class="fas fa-hand-sparkles text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
+                        </div>
+                        <p class="text-warm-gray font-light leading-relaxed mb-6">The gold standard for natural nail growth. Durable, protective, and flawlessly finished.</p>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="group bg-white p-10 shadow-sm hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-luxury-gold/20 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-eye text-8xl text-luxury-gold"></i>
+                <!-- Card 2: Russian Volume -->
+                <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                    <div class="relative h-64 w-full overflow-hidden service-slideshow">
+                        <img src="Lashes1.jpeg" class="service-image active" alt="Russian Volume" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Lashes+1';">
+                        <img src="Lashes1_2.jpg" class="service-image inactive" alt="Russian Volume Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Lashes+2';">
                     </div>
-                    <h3 class="text-2xl font-playfair mb-4 group-hover:text-luxury-gold transition-colors">Russian Volume</h3>
-                    <p class="text-warm-gray font-light leading-relaxed mb-6">Multi-dimensional volume for a look that is both dramatic and undeniably sophisticated.</p>
-                    <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    <div class="p-8 border-t border-luxury-gold/10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-playfair group-hover:text-luxury-gold transition-colors">Russian Volume</h3>
+                            <i class="fas fa-eye text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
+                        </div>
+                        <p class="text-warm-gray font-light leading-relaxed mb-6">Multi-dimensional volume for a look that is both dramatic and undeniably sophisticated.</p>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="group bg-white p-10 shadow-sm hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-luxury-gold/20 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-paint-brush text-8xl text-luxury-gold"></i>
+                <!-- Card 3: French Tips -->
+                <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                    <div class="relative h-64 w-full overflow-hidden service-slideshow">
+                        <img src="French Tips.jpg" class="service-image active" alt="French Tips" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=French+1';">
+                        <img src="French Tips_2.jpg" class="service-image inactive" alt="French Tips Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=French+2';">
                     </div>
-                    <h3 class="text-2xl font-playfair mb-4 group-hover:text-luxury-gold transition-colors">French Tips</h3>
-                    <p class="text-warm-gray font-light leading-relaxed mb-6">The definition of timeless elegance. Crisp white tips on a natural base for any occasion.</p>
-                    <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    <div class="p-8 border-t border-luxury-gold/10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-playfair group-hover:text-luxury-gold transition-colors">French Tips</h3>
+                            <i class="fas fa-paint-brush text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
+                        </div>
+                        <p class="text-warm-gray font-light leading-relaxed mb-6">The definition of timeless elegance. Crisp white tips on a natural base for any occasion.</p>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    </div>
                 </div>
 
-                 <!-- Card 4 -->
-                 <div class="group bg-white p-10 shadow-sm hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-luxury-gold/20 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-feather-alt text-8xl text-luxury-gold"></i>
+                 <!-- Card 4: Hybrid Lashes -->
+                 <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                    <div class="relative h-64 w-full overflow-hidden service-slideshow">
+                        <!-- Using Placeholders as these files were not in original upload -->
+                        <img src="Hybrid_Lashes.jpg" class="service-image active" alt="Hybrid Lashes" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Hybrid+Lashes';">
+                        <img src="Hybrid_Lashes_2.jpg" class="service-image inactive" alt="Hybrid Lashes Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Close+Up';">
                     </div>
-                    <h3 class="text-2xl font-playfair mb-4 group-hover:text-luxury-gold transition-colors">Hybrid Lashes</h3>
-                    <p class="text-warm-gray font-light leading-relaxed mb-6">A textured blend of classic and volume techniques for a wispy, fluttery effect.</p>
-                    <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    <div class="p-8 border-t border-luxury-gold/10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-playfair group-hover:text-luxury-gold transition-colors">Hybrid Lashes</h3>
+                            <i class="fas fa-feather-alt text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
+                        </div>
+                        <p class="text-warm-gray font-light leading-relaxed mb-6">A textured blend of classic and volume techniques for a wispy, fluttery effect.</p>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    </div>
                 </div>
 
-                 <!-- Card 5 -->
-                 <div class="group bg-white p-10 shadow-sm hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-luxury-gold/20 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-magic text-8xl text-luxury-gold"></i>
+                 <!-- Card 5: Tip Extensions -->
+                 <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                    <div class="relative h-64 w-full overflow-hidden service-slideshow">
+                        <img src="Tip Extensions.jpg" class="service-image active" alt="Tip Extensions" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Extensions+1';">
+                        <img src="Tip Extensions_2.jpg" class="service-image inactive" alt="Tip Extensions Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Extensions+2';">
                     </div>
-                    <h3 class="text-2xl font-playfair mb-4 group-hover:text-luxury-gold transition-colors">Tip Extensions</h3>
-                    <p class="text-warm-gray font-light leading-relaxed mb-6">Instant length and refined shape, sculpted to perfection for a glamorous finish.</p>
-                    <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    <div class="p-8 border-t border-luxury-gold/10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-playfair group-hover:text-luxury-gold transition-colors">Tip Extensions</h3>
+                            <i class="fas fa-magic text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
+                        </div>
+                        <p class="text-warm-gray font-light leading-relaxed mb-6">Instant length and refined shape, sculpted to perfection for a glamorous finish.</p>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    </div>
                 </div>
 
-                 <!-- Card 6 -->
-                 <div class="group bg-white p-10 shadow-sm hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-luxury-gold/20 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-leaf text-8xl text-luxury-gold"></i>
+                 <!-- Card 6: Waxing -->
+                 <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                    <div class="relative h-64 w-full overflow-hidden service-slideshow">
+                         <!-- Using Placeholders as these files were not in original upload -->
+                        <img src="Waxing.jpg" class="service-image active" alt="Waxing Services" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Waxing+1';">
+                        <img src="Waxing_2.jpg" class="service-image inactive" alt="Waxing Services Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Waxing+2';">
                     </div>
-                    <h3 class="text-2xl font-playfair mb-4 group-hover:text-luxury-gold transition-colors">Waxing</h3>
-                    <p class="text-warm-gray font-light leading-relaxed mb-6">Professional hair removal services designed for smooth, long-lasting results.</p>
-                    <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    <div class="p-8 border-t border-luxury-gold/10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-playfair group-hover:text-luxury-gold transition-colors">Waxing</h3>
+                            <i class="fas fa-leaf text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
+                        </div>
+                        <p class="text-warm-gray font-light leading-relaxed mb-6">Professional hair removal services designed for smooth, long-lasting results.</p>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,80 +265,55 @@
     <!-- Gallery Section -->
     <section id="gallery" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div>
-                    <span class="text-luxury-gold uppercase tracking-[0.2em] text-sm font-semibold">Portfolio</span>
-                    <h2 class="text-4xl md:text-5xl mt-3 font-playfair text-deep-charcoal">Visual Stories</h2>
-                </div>
-                <a href="https://instagram.com" target="_blank" class="hidden md:inline-block text-sm uppercase tracking-widest border-b border-deep-charcoal pb-1 hover:text-luxury-gold hover:border-luxury-gold transition-all mt-6 md:mt-0">
-                    Follow on Instagram
-                </a>
+            <div class="flex flex-col items-center mb-12">
+                <span class="text-luxury-gold uppercase tracking-[0.2em] text-sm font-semibold">Portfolio</span>
+                <h2 class="text-4xl md:text-5xl mt-3 font-playfair text-deep-charcoal">Visual Stories</h2>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- Gallery Item 1 -->
-                <div class="relative group aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer">
-                    <img src="BIAB.jpg" alt="BIAB Nails" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                         onerror="this.onerror=null;this.src='https://placehold.co/400x500/F5F5F5/A3A3A3?text=BIAB';">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
-                </div>
+            <!-- Single Large Slideshow -->
+            <div id="gallery-slideshow-container" class="relative w-full max-w-5xl mx-auto aspect-[4/5] md:aspect-video overflow-hidden rounded-lg shadow-2xl border border-gray-100 gallery-slideshow">
+                
+                <!-- Image 1 -->
+                <img src="BIAB.jpg" class="gallery-slide-item active" alt="BIAB Nails" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/1200x800/F5F5F5/A3A3A3?text=BIAB';">
+                
+                <!-- Image 2 -->
+                <img src="French Tips.jpg" class="gallery-slide-item inactive" alt="French Tips" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/1200x800/EAEAEA/A3A3A3?text=French';">
+                
+                <!-- Video 1 -->
+                <video autoplay loop muted playsinline class="gallery-slide-item inactive w-full h-full object-cover">
+                    <source src="Lashesvid.mp4" type="video/mp4">
+                </video>
+                
+                <!-- Image 3 -->
+                <img src="Tip Extensions.jpg" class="gallery-slide-item inactive" alt="Tip Extensions" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/1200x800/F5F5F5/A3A3A3?text=Extensions';">
+                
+                <!-- Video 2 -->
+                <video autoplay loop muted playsinline class="gallery-slide-item inactive w-full h-full object-cover">
+                    <source src="Russian Cat Eye.mp4" type="video/mp4">
+                </video>
+                
+                <!-- Image 4 -->
+                <img src="Lashes1.jpeg" class="gallery-slide-item inactive" alt="Russian Volume Lashes" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/1200x800/EAEAEA/A3A3A3?text=Volume';">
+                
+                <!-- Video 3 -->
+                <video autoplay loop muted playsinline class="gallery-slide-item inactive w-full h-full object-cover">
+                    <source src="frenchvid.mp4" type="video/mp4">
+                </video>
 
-                <!-- Gallery Item 2 -->
-                <div class="relative group aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer md:mt-12">
-                     <img src="French Tips.jpg" alt="French Tips" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                          onerror="this.onerror=null;this.src='https://placehold.co/400x500/EAEAEA/A3A3A3?text=French';">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
-                </div>
-
-                <!-- Gallery Item 3 -->
-                <div class="relative group aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer">
-                    <video autoplay loop muted playsinline class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
-                        <source src="Lashesvid.mp4" type="video/mp4">
-                    </video>
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
-                </div>
-
-                <!-- Gallery Item 4 -->
-                <div class="relative group aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer md:mt-12">
-                    <img src="Tip Extensions.jpg" alt="Tip Extensions" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                         onerror="this.onerror=null;this.src='https://placehold.co/400x500/F5F5F5/A3A3A3?text=Extensions';">
-                     <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
-                </div>
-                 <!-- Gallery Item 5 -->
-                 <div class="relative group aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer">
-                    <video autoplay loop muted playsinline class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
-                        <source src="Russian Cat Eye.mp4" type="video/mp4">
-                    </video>
-                     <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
-                </div>
-
-                <!-- Gallery Item 6 -->
-                <div class="relative group aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer md:mt-12">
-                    <img src="Lashes1.jpeg" alt="Russian Volume Lashes" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                         onerror="this.onerror=null;this.src='https://placehold.co/400x500/EAEAEA/A3A3A3?text=Volume';">
-                     <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
-                </div>
-
-                <!-- Gallery Item 7 -->
-                <div class="relative group aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer">
-                    <video autoplay loop muted playsinline class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
-                        <source src="frenchvid.mp4" type="video/mp4">
-                    </video>
-                     <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
-                </div>
-
-                <!-- Gallery Item 8 -->
-                <div class="relative group aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer md:mt-12">
-                    <video autoplay loop muted playsinline class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
-                        <source src="Russian Volume Cat Eye.mp4" type="video/mp4">
-                    </video>
-                     <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
-                </div>
+                <!-- Video 4 -->
+                <video autoplay loop muted playsinline class="gallery-slide-item inactive w-full h-full object-cover">
+                    <source src="Russian Volume Cat Eye.mp4" type="video/mp4">
+                </video>
+                
             </div>
             
-            <div class="text-center mt-10 md:hidden">
-                 <a href="https://instagram.com" target="_blank" class="text-sm uppercase tracking-widest border-b border-deep-charcoal pb-1 hover:text-luxury-gold hover:border-luxury-gold transition-all">
-                    Follow on Instagram
+            <div class="text-center mt-12">
+                 <a href="https://www.instagram.com/blueternitybeautybar/" target="_blank" class="text-sm md:text-base uppercase tracking-widest border-b border-deep-charcoal pb-1 hover:text-luxury-gold hover:border-luxury-gold transition-all">
+                    Unlock Your Daily Dose of Glamour
                 </a>
             </div>
         </div>
@@ -331,8 +366,8 @@
                     </div>
                 </div>
 
-                <!-- Map (Styled darker/grayscale to fit theme if possible via API or overlay) -->
-                <div class="h-[400px] w-full relative grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700 rounded-sm overflow-hidden">
+                <!-- Map -->
+                <div class="h-[400px] w-full relative opacity-90 hover:opacity-100 transition-all duration-700 rounded-sm overflow-hidden">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.639893818687!2d-6.265330022792829!3d53.34981447228849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e84c29e88a9%3A0x88984032c8671b70!2s4%20Henry%20Pl%2C%20North%20City%2C%20Dublin%201%2C%20D01%20P8N2%2C%20Ireland!5e0!3m2!1sen!2sza!4v1723487373099!5m2!1sen!2sza" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -346,6 +381,15 @@
             <p class="text-sm text-gray-500 font-light mt-2 md:mt-0">Designed with Elegance.</p>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/353899440720" target="_blank" class="fixed bottom-8 right-8 z-50 bg-luxury-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(197,160,89,0.4)] hover:bg-deep-charcoal hover:scale-110 transition-all duration-300 group border border-white/20">
+        <i class="fab fa-whatsapp"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-20 bg-white text-deep-charcoal text-xs font-bold px-3 py-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none tracking-widest uppercase">
+            Chat with us
+        </span>
+    </a>
 
     <script>
         // Mobile menu toggle
@@ -364,6 +408,52 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Service Slideshow Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const slideshows = document.querySelectorAll('.service-slideshow');
+            
+            slideshows.forEach(slideshow => {
+                const images = slideshow.querySelectorAll('.service-image');
+                if (images.length < 2) return; // Need at least 2 images
+
+                let currentIndex = 0;
+                
+                setInterval(() => {
+                    // Hide current
+                    images[currentIndex].classList.remove('active');
+                    images[currentIndex].classList.add('inactive');
+                    
+                    // Update index
+                    currentIndex = (currentIndex + 1) % images.length;
+                    
+                    // Show next
+                    images[currentIndex].classList.remove('inactive');
+                    images[currentIndex].classList.add('active');
+                }, 4000); // Change image every 4 seconds
+            });
+            
+            // Main Gallery Slideshow Logic
+            const gallerySlideshow = document.querySelector('.gallery-slideshow');
+            if (gallerySlideshow) {
+                const galleryItems = gallerySlideshow.querySelectorAll('.gallery-slide-item');
+                if (galleryItems.length > 1) {
+                    let galleryIndex = 0;
+                    setInterval(() => {
+                        // Hide current
+                        galleryItems[galleryIndex].classList.remove('active');
+                        galleryItems[galleryIndex].classList.add('inactive');
+                        
+                        // Update index
+                        galleryIndex = (galleryIndex + 1) % galleryItems.length;
+                        
+                        // Show next
+                        galleryItems[galleryIndex].classList.remove('inactive');
+                        galleryItems[galleryIndex].classList.add('active');
+                    }, 5000); // Change gallery slide every 5 seconds
+                }
+            }
         });
     </script>
 
