@@ -47,7 +47,7 @@
         }
 
         .btn-primary {
-            @apply bg-luxury-gold text-white font-semibold py-3 px-10 rounded-none hover:bg-black transition-all duration-500 uppercase tracking-[0.2em] text-sm;
+            @apply bg-luxury-gold text-white font-semibold py-3 px-10 rounded-none hover:bg-black transition-all duration-500 uppercase tracking-[0.2em] text-sm cursor-pointer;
         }
 
         .section-title {
@@ -94,7 +94,8 @@
                 <a href="#gallery" class="nav-link">Gallery</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <a href="tel:+353899440720" class="hidden md:inline-block btn-primary">Book Appointment</a>
+            <!-- Updated Button: Triggers Modal -->
+            <a href="#" class="hidden md:inline-block btn-primary btn-book-now">Book Appointment</a>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none text-deep-charcoal hover:text-luxury-gold transition-colors">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
@@ -105,7 +106,8 @@
             <a href="#services" class="block py-3 nav-link border-b border-gray-50">Services</a>
             <a href="#gallery" class="block py-3 nav-link border-b border-gray-50">Gallery</a>
             <a href="#contact" class="block py-3 nav-link">Contact</a>
-            <a href="tel:+353899440720" class="block mt-6 text-center btn-primary w-full">Book Now</a>
+            <!-- Updated Button: Triggers Modal -->
+            <a href="#" class="block mt-6 text-center btn-primary w-full btn-book-now">Book Now</a>
         </div>
     </header>
 
@@ -173,7 +175,7 @@
                             <i class="fas fa-hand-sparkles text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
                         </div>
                         <p class="text-warm-gray font-light leading-relaxed mb-6">The gold standard for natural nail growth. Durable, protective, and flawlessly finished.</p>
-                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all btn-book-now">Book Now</a>
                     </div>
                 </div>
 
@@ -181,7 +183,7 @@
                 <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
                     <div class="relative h-64 w-full overflow-hidden service-slideshow">
                         <img src="Lashes1.jpeg" class="service-image active" alt="Russian Volume" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Lashes+1';">
-                        <img src="Lashes1_2.jpg" class="service-image inactive" alt="Russian Volume Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Lashes+2';">
+                        <img src="https://sydneyeyelashextensions.com/wp-content/uploads/2019/03/Maximum-Volume-Eyelash-Extensions-18.jpg" class="service-image inactive" alt="Russian Volume Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Lashes+2';">
                     </div>
                     <div class="p-8 border-t border-luxury-gold/10">
                         <div class="flex justify-between items-start mb-4">
@@ -189,7 +191,7 @@
                             <i class="fas fa-eye text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
                         </div>
                         <p class="text-warm-gray font-light leading-relaxed mb-6">Multi-dimensional volume for a look that is both dramatic and undeniably sophisticated.</p>
-                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all btn-book-now">Book Now</a>
                     </div>
                 </div>
 
@@ -205,7 +207,7 @@
                             <i class="fas fa-paint-brush text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
                         </div>
                         <p class="text-warm-gray font-light leading-relaxed mb-6">The definition of timeless elegance. Crisp white tips on a natural base for any occasion.</p>
-                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all btn-book-now">Book Now</a>
                     </div>
                 </div>
 
@@ -213,8 +215,8 @@
                  <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
                     <div class="relative h-64 w-full overflow-hidden service-slideshow">
                         <!-- Using Placeholders as these files were not in original upload -->
-                        <img src="Hybrid_Lashes.jpg" class="service-image active" alt="Hybrid Lashes" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Hybrid+Lashes';">
-                        <img src="Hybrid_Lashes_2.jpg" class="service-image inactive" alt="Hybrid Lashes Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Close+Up';">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRus65CejbvQr7AcIflHNSGkPNJK8PvMlZ-3A&s" class="service-image active" alt="Hybrid Lashes" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Hybrid+Lashes';">
+                        <img src="data:image/jpeg;base64,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" class="service-image inactive" alt="Hybrid Lashes Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Close+Up';">
                     </div>
                     <div class="p-8 border-t border-luxury-gold/10">
                         <div class="flex justify-between items-start mb-4">
@@ -222,7 +224,7 @@
                             <i class="fas fa-feather-alt text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
                         </div>
                         <p class="text-warm-gray font-light leading-relaxed mb-6">A textured blend of classic and volume techniques for a wispy, fluttery effect.</p>
-                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all btn-book-now">Book Now</a>
                     </div>
                 </div>
 
@@ -230,7 +232,7 @@
                  <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
                     <div class="relative h-64 w-full overflow-hidden service-slideshow">
                         <img src="Tip Extensions.jpg" class="service-image active" alt="Tip Extensions" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Extensions+1';">
-                        <img src="Tip Extensions_2.jpg" class="service-image inactive" alt="Tip Extensions Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Extensions+2';">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREuFqMuKOvzAnkiiabJz5ddKiJ8BDUu9XuJg&s" class="service-image inactive" alt="Tip Extensions Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Extensions+2';">
                     </div>
                     <div class="p-8 border-t border-luxury-gold/10">
                         <div class="flex justify-between items-start mb-4">
@@ -238,7 +240,7 @@
                             <i class="fas fa-magic text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
                         </div>
                         <p class="text-warm-gray font-light leading-relaxed mb-6">Instant length and refined shape, sculpted to perfection for a glamorous finish.</p>
-                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all btn-book-now">Book Now</a>
                     </div>
                 </div>
 
@@ -246,8 +248,8 @@
                  <div class="group bg-white shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
                     <div class="relative h-64 w-full overflow-hidden service-slideshow">
                          <!-- Using Placeholders as these files were not in original upload -->
-                        <img src="Waxing.jpg" class="service-image active" alt="Waxing Services" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Waxing+1';">
-                        <img src="Waxing_2.jpg" class="service-image inactive" alt="Waxing Services Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Waxing+2';">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm1gObJe49Hpw7_wQOXswpXOwB28IF_fxP1A&s" class="service-image active" alt="Waxing Services" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F5F5F5/A3A3A3?text=Waxing+1';">
+                        <img src="https://royaltywellnessspa.com/storage/2023/01/Everything-You-Need-To-Know-About-Waxing-scaled.jpeg" class="service-image inactive" alt="Waxing Services Detail" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EAEAEA/A3A3A3?text=Waxing+2';">
                     </div>
                     <div class="p-8 border-t border-luxury-gold/10">
                         <div class="flex justify-between items-start mb-4">
@@ -255,7 +257,7 @@
                             <i class="fas fa-leaf text-2xl text-luxury-gold/50 group-hover:text-luxury-gold transition-colors"></i>
                         </div>
                         <p class="text-warm-gray font-light leading-relaxed mb-6">Professional hair removal services designed for smooth, long-lasting results.</p>
-                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all">Read More</a>
+                        <a href="#" class="text-xs uppercase tracking-widest border-b border-deep-charcoal pb-1 group-hover:text-luxury-gold group-hover:border-luxury-gold transition-all btn-book-now">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -382,6 +384,70 @@
         </div>
     </footer>
 
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-[60] hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+          <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+          <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <!-- Content -->
+              <h3 class="text-2xl leading-6 font-playfair font-bold text-deep-charcoal" id="modal-title">Book Your Appointment</h3>
+              <p class="mt-2 text-sm text-gray-500">Please fill in the details below. A €20 deposit is required to secure your slot.</p>
+              
+              <form id="booking-form" class="mt-6 space-y-4">
+                  <!-- Name -->
+                  <div>
+                      <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                      <input type="text" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-luxury-gold focus:border-luxury-gold sm:text-sm p-2 border" placeholder="Your Name">
+                  </div>
+                  <!-- Service -->
+                  <div>
+                      <label for="service" class="block text-sm font-medium text-gray-700">Service</label>
+                      <select id="service" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-luxury-gold focus:border-luxury-gold sm:text-sm p-2 border">
+                          <option>BIAB Nails</option>
+                          <option>Russian Volume Lashes</option>
+                          <option>French Tips</option>
+                          <option>Hybrid Lashes</option>
+                          <option>Tip Extensions</option>
+                          <option>Waxing</option>
+                      </select>
+                  </div>
+                  <!-- Date & Time -->
+                  <div class="grid grid-cols-2 gap-4">
+                      <div>
+                          <label for="date" class="block text-sm font-medium text-gray-700">Date</label>
+                          <input type="date" id="date" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-luxury-gold focus:border-luxury-gold sm:text-sm p-2 border">
+                      </div>
+                      <div>
+                          <label for="time" class="block text-sm font-medium text-gray-700">Time</label>
+                          <select id="time" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-luxury-gold focus:border-luxury-gold sm:text-sm p-2 border">
+                              <option>10:00 AM</option>
+                              <option>11:00 AM</option>
+                              <option>12:00 PM</option>
+                              <option>1:00 PM</option>
+                              <option>2:00 PM</option>
+                              <option>3:00 PM</option>
+                              <option>4:00 PM</option>
+                              <option>5:00 PM</option>
+                              <option>6:00 PM</option>
+                          </select>
+                      </div>
+                  </div>
+              </form>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <button type="button" id="confirm-booking" class="w-full inline-flex justify-center rounded-none border border-transparent shadow-sm px-4 py-2 bg-luxury-gold text-base font-medium text-white hover:bg-black focus:outline-none sm:ml-3 sm:w-auto sm:text-sm uppercase tracking-widest transition-colors duration-300">
+                Book on WhatsApp
+              </button>
+              <button type="button" id="close-modal" class="mt-3 w-full inline-flex justify-center rounded-none border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm uppercase tracking-widest transition-colors duration-300">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/353899440720" target="_blank" class="fixed bottom-8 right-8 z-50 bg-luxury-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(197,160,89,0.4)] hover:bg-deep-charcoal hover:scale-110 transition-all duration-300 group border border-white/20">
         <i class="fab fa-whatsapp"></i>
@@ -409,6 +475,48 @@
                 });
             });
         });
+
+        // Booking Modal Logic
+        const bookButtons = document.querySelectorAll('.btn-book-now');
+        const modal = document.getElementById('booking-modal');
+        const closeModal = document.getElementById('close-modal');
+        const confirmBooking = document.getElementById('confirm-booking');
+
+        bookButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        // Close on outside click
+        modal.querySelector('.bg-gray-500').addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        confirmBooking.addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            if(!name || !date) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const message = `Hello, I would like to book an appointment.%0A%0AName: ${name}%0AService: ${service}%0APreferred Date: ${date}%0APreferred Time: ${time}%0A%0AI understand a €20 deposit is required to secure my spot.`;
+            
+            const whatsappUrl = `https://wa.me/353899440720?text=${message}`;
+            
+            window.open(whatsappUrl, '_blank');
+            modal.classList.add('hidden');
+        });
+
 
         // Service Slideshow Logic
         document.addEventListener('DOMContentLoaded', () => {
